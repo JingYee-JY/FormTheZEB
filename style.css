@@ -474,4 +474,19 @@ width: 20% !important;
     .final-title{
         margin-top: 0%;
     }
+    .final-title img{
+        padding-bottom: 2.5%;
+    }
+    .icon{
+        height: 95px;
+    }
+    .restart {
+        margin: 0px;
+    }
+    .restart p{
+        margin: 15px;
+    }
+    .text{
+        margin-bottom: 2.5%;
+    }
   }
