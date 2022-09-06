@@ -246,12 +246,12 @@ hr{
     top: 5%;
     right: 5%;
     font-size: 30px;
-    padding: 0% 2.5%;
+    padding: 0% 2.7%;
     background-color: red;
     font-weight: 900;
     color: white;
     border: 0px;
-    border-radius: 30px;
+    border-radius: 20px;
 }
 
 .information{
