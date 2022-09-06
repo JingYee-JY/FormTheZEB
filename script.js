@@ -79,6 +79,10 @@ submit.addEventListener("click", () => {
     if(chosen3 == null){
         return
     }
+    console.log(chosen1Name)
+    console.log(chosen2Name)
+    console.log(chosen3Name)
+    console.log(wrongAnswer.name)
     if(chosen1Name == wrongAnswer.name || chosen2Name == wrongAnswer.name || chosen3Name == wrongAnswer.name){
         popUp.classList.remove("hide")
         startGame = false
@@ -144,10 +148,6 @@ function Question(){
     let choice3Index = Math.floor(Math.random() * rightItems.length)
     let wrongIndex;
 
-    console.log(choice1Index)
-    console.log(choice2Index)
-    console.log(choice3Index)
-    console.log(wrongAnswer)
     if(random == 0){
         if(wrongAnswer == null){
             wrongIndex = 0
@@ -179,10 +179,13 @@ function Question(){
     let choice1 = rightItems[choice1Index]
     let choice2 = rightItems[choice2Index]
     let choice3 = rightItems[choice3Index]
-    wrongAnswer = wrongItems[wrongIndex]    
-
-    let allChoice = [ choice1, choice2, choice3, wrongAnswer]
+    let choice4 = wrongItems[wrongIndex]    
+    wrongAnswer = choice4
+    console.log(wrongAnswer)
     
+    let allChoice = [ choice1, choice2, choice3, choice4]
+    
+    console.log(choice1)
     allChoice.reverse();
 
     for (let i=0; i < allChoice.length; i++){
@@ -194,9 +197,6 @@ function Question(){
         allChoice[j] = tmp
     }
 
-    console.log(chosen1)
-    console.log(chosen2)
-    console.log(chosen3)
     if(setOnce == false){
         for (let i = 0; i < allChoice.length; i ++){
             let current = ".btn" + (i + 1)
@@ -210,8 +210,8 @@ function Question(){
             console.log(chosen1)
     
             btn.addEventListener("click", () => {
-                console.log(chosen1)
-                        console.log(totalChosen)
+                console.log(allChoice)
+                let name = btn.getAttribute("data")
                 if(chosen1 == btn || chosen2 == btn || chosen3 == btn){
                     if(chosen1 == btn){
                         chosen1 = null
@@ -240,17 +240,17 @@ function Question(){
                     if(totalChosen < 3){
                         if(chosen1 == null){
                             chosen1 = btn
-                            chosen1Name = allChoice[i].name
+                            chosen1Name = name
                             btn.classList.add("choosen")
                         }
                         else if(chosen2 == null){
                             chosen2 = btn
-                            chosen2Name = allChoice[i].name
+                            chosen2Name = name
                             btn.classList.add("choosen")
                         }
                         else if(chosen3 == null){
                             chosen3 = btn
-                            chosen3Name = allChoice[i].name
+                            chosen3Name = name
                             btn.classList.add("choosen")
                         }
                         totalChosen = totalChosen + 1
