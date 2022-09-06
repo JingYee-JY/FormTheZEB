@@ -448,8 +448,14 @@ width: 20% !important;
     body{
       width: 100%;
     }
+    .instruction{
+        max-height: 60vh;
+    }
+    .startButton,.startGame,.submit {
+        max-width: 225px;
+    }
     .start, .howToPlay,.game,.final{
-        max-width: 400px;
+        max-width: 450px;
         margin: 0 auto;
     }
     .preview{
@@ -463,7 +469,8 @@ width: 20% !important;
         margin-bottom: 2.5%;
     }
     .game-container{
-        grid-template-rows: repeat(2, 45%);
+        width: 68%;
+        grid-template-rows: repeat(2, 47%);
         margin-bottom: 1%;
     }
     .icon{
@@ -473,6 +480,8 @@ width: 20% !important;
         font-size: 30px;
     }
     .con{
+        padding-bottom: 0%;
+        margin-bottom: 0%;
         margin-top: 1%;
     }
     .start, .final, .game{
@@ -485,7 +494,7 @@ width: 20% !important;
     .pop img{
         max-width: 60px;
     }
-    .startButton, .startButton .nextButton{
+    .startButton, .startGame, .nextButton{
         max-width: 250px;
     }
     .final-title{
