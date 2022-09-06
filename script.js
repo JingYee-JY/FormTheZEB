@@ -30,6 +30,7 @@ let chosen3Name
 
 let wrongAnswer;
 let random
+let score;
 let time;
 let setOnce;
 let current;
@@ -58,6 +59,7 @@ startGameButton.addEventListener("click", () => {
     body.style.backgroundColor = "#F0E6C2"
     time = 30
     current = 0
+    score = 0
     wrongAnswer = null
     setOnce = false
     random = Math.floor(Math.random() * wrongItems.length)
@@ -69,6 +71,7 @@ restart.addEventListener("click", () => {
     body.style.backgroundColor = "#F0E6C2"
     time = 30
     current = 0
+    score = 0
     timerCount.innerHTML = `${time}s`;
     wrongAnswer = null
     random = Math.floor(Math.random() * wrongItems.length)
@@ -93,6 +96,7 @@ submit.addEventListener("click", () => {
         return
     }
     else{
+        score = score + 1
         Question()
     }
 })
@@ -118,23 +122,45 @@ function Question(){
     startGame = true
 
     if(current == 2){
-        startGame = false
+        if(score == current){
+            startGame = false
+            final.classList.remove("hide")
+            body.style.backgroundColor = "#F4B95C"
+            final.style.backgroundColor = "#F4B95C"
+            text.style.backgroundColor = "#3070C4"
+            text.style.color = "white"
+            more.style.backgroundColor = "white"
+            more.style.color = "#60A478"
+            more.innerHTML = ` 
+            <p class="Moretext">Find out how <br> ZEB’s work</p>
+            <img src="./img/arrow-green.png">`
+            finalTitle.innerHTML =`
+            <img class="title-final" src="./img/win.png">`
+            icon.innerHTML = `
+              <img src="./img/awesome.png">
+              <p>Awesome!</p>`
+              return
+        }
+        else{
+            startGame = false
               final.classList.remove("hide")
-              body.style.backgroundColor = "#F4B95C"
-              final.style.backgroundColor = "#F4B95C"
-              text.style.backgroundColor = "#3070C4"
-              text.style.color = "white"
-              more.style.backgroundColor = "white"
-              more.style.color = "#60A478"
+              body.style.backgroundColor = "#3070C4"
+              final.style.backgroundColor = "#3070C4"
+              text.style.backgroundColor = "white"
+              text.style.color = "black"
+              more.style.backgroundColor = "#F4B95C"
+              more.style.color = "black"
               more.innerHTML = ` 
-              <p class="Moretext">Find out how <br> ZEB’s work</p>
-              <img src="./img/arrow-green.png">`
+              <p class="Moretext">Find out how <br> we do</p>
+              <img src="./img/arrow-black.png">`
               finalTitle.innerHTML =`
-              <img class="title-final" src="./img/win.png">`
+              <img class="title-final" src="./img/lose.png">`
               icon.innerHTML = `
-                <img src="./img/awesome.png">
-                <p>Awesome!</p>`
-                return
+                <img src="./img/keepItUp.png">
+                <p>Keep it up!</p>`
+              return
+        }
+        
     }
     current++;
 
