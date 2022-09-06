@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form The ZEB</title>
+    <link rel="stylesheet" 
+    href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="start">
+        <div class="game-title">
+            <img class="title" src="./img/title.png">
+        </div>
+        <img class="preview" src="./img/preview.png">
+        <button class="startButton">
+            <p class>START GAME</p>
+			<h1 class="arrowHead">&#8594</h1> 
+        </button>
+    </div>
+    <div class="howToPlay hide">
+        <h1>HOW TO PLAY<hr></h1>
+            <div class="instruction">
+            <p>To form up a Zero Energy Building, we need some resources.</p>
+            <p>Choose 3 out of 4 elements that can build the zero energy building. </p>
+            <div class="EXindicator">
+                <p>Choose 3</p>
+                <p>3/3</p>
+            </div>    
+            <div class="example">
+                        <div class="options choosen">
+                            <img src="./img/EfficientLighting.png">
+                            <p>Efficient Lighting</p>
+                        </div>
+                        <div class="options choosen">
+                            <img src="./img/Fan.png">
+                            <p>Fan</p>
+                        </div>
+                        <div class="options choosen">
+                            <img src="./img/LivingWall.png">
+                            <p>Living Wall</p>
+                        </div>
+                        <div class="options">
+                            <img src="./img/RoofTop.png">
+                            <p>Roof Top</p>
+                        </div>
+                </div>
+                <p>Then Submit your answer.</p>
+            </div>
+            <button class="startGame"> 
+                <p class>START</p>
+				<h1 class="arrowHead">&#8594</h1> 
+            </button>
+    </div>
+    <div class="game hide">
+        <div class="con">
+            <div class="top">
+                <div class="time">30s</div>
+            </div>
+            <p>Form the elements to build a Zero energy building</p>
+        </div>
+        <div class="indicator">
+            <p>Choose 3</p>
+            <p>0/3</p>
+        </div>  
+        <div class="game-container">
+            <button class="btn1"></button>
+            <button class="btn2"></button>
+            <button class="btn3"></button>
+            <button class="btn4"></button>
+        </div>
+        <button class="submit"> 
+            <p class>SUBMIT</p>
+            <h1 class="arrowHead">&#8594</h1> 
+        </button>
+    </div>
+    <div class="popUp hide">
+        <div class="pop">
+            <div class="information"></div>
+            <button class="close">&times</button>
+        </div>
+    </div>
+    <div class="final hide">
+        <div class="final-title">
+            <img class="title-final" src="./img/title.png">
+        </div>
+        <div class="icon"></div>
+        <div class="text">
+            <p>ZEB will save</p>
+            <p><strong>S$84,000</strong></p>
+            <p>a year in energy cost compared to typical office in Singapore.</p>
+        </div>
+        <a class="More">
+            <p class="words">Find out how you can save</p>
+            <h1 class="arrowHead">&#8594</h1> </a>
+        <button class="restart">
+                <img src="./img/restart.png">
+                <p>RESTART</p>
+            </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

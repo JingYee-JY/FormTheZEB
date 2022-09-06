@@ -1,0 +1,438 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #F4B95C;
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.start, .game, .howToPlay, .final{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.howToPlay{
+    background-color: #E7F7F5;
+}
+
+.start{
+    overflow: hidden;
+    position: fixed;
+    background-color: #F4B95C;
+}
+.final{
+    overflow: hidden;
+    position: fixed;
+    z-index: 10;
+}
+.game{
+    overflow: hidden;
+    position: fixed;
+    background-color: #F0E6C2;
+}
+.game-title{
+    margin-top: 10%;
+    align-self: center;
+    width: 40%;
+}
+
+.title{
+    width: 100%;
+    box-sizing: contents-box;
+}
+
+.preview{
+    width: 80%;
+    margin-left: -5%;
+    margin-bottom: 5%;
+    padding: 1%;
+  }
+  
+.startButton, .startGame, .submit{
+    width: 80%;
+    margin: 0% auto;
+    background-color: #3070C4;
+    border: 0px;
+    border-radius: 10px;
+    padding: 2.5%;
+    margin-bottom: 10%;
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.startButton p, .startGame p, .nextButton p, .submit p {
+    margin: 3%;
+    margin-right: 6%;
+}
+
+.arrowHead{
+	font-size: 40px;
+    margin-top: -3%;
+    margin-bottom: 0;
+}
+
+.hide{
+    display: none;
+    visibility: hidden;
+}
+
+.instruction{
+    margin: 0% auto;
+    width: 90%;
+    height: 20%;
+    font-size: 19px;
+    text-align: left;
+}
+
+.indicator, .EXindicator{
+    background-color: #3070C4;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0% auto;
+    border-radius: 10px;
+    color: white;
+    font-weight: 900;
+    font-size: 17px;
+    margin-bottom: 5%;
+    padding: 2% 5%;
+}
+
+.EXindicator p, .indicator p{
+    margin: 0%;
+}
+
+.example, .game-container{
+    display: grid;
+    margin: 0% auto;
+    width: 80%;
+    gap: 5%;
+    margin-bottom: 10%;
+    grid-template-columns: repeat(2,47%);
+    grid-template-rows: repeat(2, 50%);
+}
+
+.options,.btn1,.btn2,.btn3,.btn4{
+    width: 90%;
+    padding: 2.5%;
+    border: 0px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.options img, .btn1 img, .btn2 img, .btn3 img, .btn4 img{
+    margin-top: 2%;
+    width: 70%;
+}
+.options p, .btn1 p, .btn2 p, .btn3 p, .btn4 p{
+    font-size: 15px;
+    font-weight: 900;
+    margin: 0%;
+    margin-bottom: 20%;
+}
+
+.choosen{
+    box-sizing: border-box;
+    border: 5px solid black;
+}
+
+h1{
+    font-size: 30px;
+    margin-top: 10%;
+}
+
+hr{
+    width: 90%;
+    background-color: black;
+    border: 2px solid black;
+    margin-bottom: 0%;
+}
+
+.con{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+	padding: 10px;
+    margin-top: 10%;
+    z-index: 3;
+    font-weight: 900;
+}
+
+.con p{
+    width: 80%;
+    margin: 5% auto;
+    font-size: 20px;
+}
+
+.top{
+	position: relative;
+	display: flex;
+	background-color: #3070C4;
+	border-radius: 20px;
+	font-size: 20px;
+	width: 100%;
+	height: 30px !important;
+	padding: 2.5%;
+}
+
+.time{
+	position: absolute;
+	top: -10%;
+	right: 40%;
+	background-color: white;
+	border-radius: 10px;
+	height: 120%;
+	width: 20%;
+	display: flex;
+	z-index: 9;
+	font-size: 25px;
+	justify-content: center;
+	align-items: center;
+}
+
+.game-container{
+    display: grid;
+    margin: 0% auto;
+    width: 75%;
+    gap: 5%;
+    border: 0px;
+    justify-content: center;
+    margin-bottom: 10%;
+    grid-template-columns: repeat(2,45%);
+    grid-template-rows: repeat(2, 50%);
+}
+
+.popUp{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    place-items: center;
+    gap: 5vh;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background-color: rgba(50, 50, 50,0.6);
+}
+.pop{
+    background-color: white;
+    position: relative;
+    width: 80%;
+    height: 40%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+.close{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    padding: 0% 2.5%;
+    background-color: red;
+    font-weight: 900;
+    color: white;
+    border: 0px;
+    border-radius: 30px;
+}
+
+.information{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.information img{
+    margin-top: 2.5%;
+    width: 40%;
+}
+.information h1{
+    font-weight: 900;
+    font-size: 20px;
+    margin: 0%;
+}
+.information p {
+    text-align: center;
+}
+
+.More{
+    margin: 0% auto;
+	width: 80%;
+	border: 0;
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 7px;
+    text-decoration: none;
+	color: #60A478;
+	padding: 2.5%;
+}
+
+.More p{
+	font-size: 20px;
+	font-weight: 1000;
+	margin: auto 1.5%;
+	line-height: normal;
+}
+
+.words{
+	font-size: 40px;
+	width: 60%;
+}
+
+.restart{
+	width: 70%;
+	position: relative;
+	background-color: transparent;
+	border: 0px;
+	color: white;
+	font-size: 20px;
+	margin: 0% auto;
+	font-weight: 600;
+}
+
+.arrowHead{
+	font-size: 30px;
+	margin-right: 2.55%;
+}
+
+.final-title{
+	margin-top: 10%;
+    align-self: center;
+    width: 150px;
+	margin-bottom: 0%;
+  }
+
+  .title-final{
+	position: relative;
+    width: 100%;
+    padding: 5%;
+    box-sizing: border-box;
+  }
+
+  .icon{
+    margin: 0 auto;
+	width: 200px;
+    color: white;
+	height: 110px;
+  }
+
+  .icon p{
+    margin: 0%;
+	font-size: 40px;
+	font-weight: 1000;
+}
+
+  .tick{
+	width: 20% !important;
+  }
+
+  .icon img{
+	width: 20%;
+	position: relative;
+	box-sizing: border-box;
+  }
+
+  strong{
+	margin: 0%;
+	font-size: 50px;
+	font-weight: 900;
+  }
+
+  .text{
+    margin: 0 auto;
+    background-color: #3070C4;
+	width: 80%;
+    padding: 2.5%;
+	height: 200px;
+	margin-bottom: 5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	line-height: normal;
+	border-radius: 10px;
+	font-size: 20px;
+    color: white;
+  }
+
+  .text p , .text h2{
+	margin: 0% 2.5%;
+  }
+
+  .restart img{
+    position: absolute;
+	width: 5%;
+	top: 35%;
+	left: 25%;
+  }
+
+  /*desktop*/
+@media screen and (min-width:1200px){
+    body{
+      width: 100%;
+    }
+    .start, .howToPlay,.game,.final{
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .preview{
+        max-width: 220px;
+    }
+    .con p{
+        margin-top: 2%;
+        margin-bottom: 0%;
+    }
+    .indicator{
+        margin-bottom: 2.5%;
+    }
+    .game-container{
+        margin-bottom: 5%;
+    }
+    .icon{
+         max-height: 90px;
+    }
+    .icon p{
+        font-size: 30px;
+    }
+    .con{
+        margin-top: 1%;
+    }
+    .start, .final, .game{
+      left: 0;
+      right: 0;
+    }
+    .pop{
+        max-width: 350px;
+    }
+    .pop img{
+        max-width: 60px;
+    }
+    .startButton, .startButton .nextButton{
+        max-width: 250px;
+    }
+    .final-title{
+        margin-top: 0%;
+    }
+  }
+
