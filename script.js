@@ -126,15 +126,14 @@ function Question(){
               text.style.color = "white"
               more.style.backgroundColor = "white"
               more.style.color = "#60A478"
-              more.href = "https://www.energy.gov/eere/buildings/zero-energy-buildings-resource-hub"
               more.innerHTML = ` 
-              <p class="words">Find out how ZEB’s work</p>
-              <h1 class="arrowHead">&#8594</h1>`
+              <p class="Moretext">Find out how <br> ZEB’s work</p>
+              <img src="./img/arrow-green.png">`
               finalTitle.innerHTML =`
               <img class="title-final" src="./img/win.png">`
               icon.innerHTML = `
                 <img src="./img/awesome.png">
-                <p>Awesome</p>`
+                <p>Awesome!</p>`
                 return
     }
     current++;
@@ -286,10 +285,9 @@ function updateCountDown(){
               text.style.color = "black"
               more.style.backgroundColor = "#F4B95C"
               more.style.color = "black"
-              more.href = "https://www.globalgoals.org/goals/11-sustainable-cities-and-communities/"
               more.innerHTML = ` 
-              <p class="words">Find out how you can save</p>
-              <h1 class="arrowHead">&#8594</h1>`
+              <p class="Moretext">Find out how <br> we do</p>
+              <img src="./img/arrow-black.png">`
               finalTitle.innerHTML =`
               <img class="title-final" src="./img/lose.png">`
               icon.innerHTML = `
