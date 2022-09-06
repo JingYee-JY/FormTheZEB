@@ -447,7 +447,8 @@ width: 20% !important;
         margin-bottom: 2.5%;
     }
     .game-container{
-        margin-bottom: 5%;
+        grid-template-rows: repeat(2, 45%);
+        margin-bottom: 1%;
     }
     .icon{
          max-height: 90px;
